@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="transportBooking" data-role="page">
+        <div data-role="header" class="header-nav">
+            <a id="backToBooking" onclick="NavigatePage('booking.html')" data-icon="arrow-l" class="header-button">Back</a>
+            <h1 id="headerStatus">Transport Booking</h1>
+        </div>
+        <div class="ui-content" role="main">
+          <br>
+          <div class="ui-grid-solo header">
+            <center>
+              <img src="../images/icons/007-verification-of-delivery-list-clipboard-symbol.png" class="icons" alt="">
+            </center>
+          </div>
+          <div class="ui-grid-solo ">
+            <h3 id="h3Status">Booking Information</h3>
+          </div>
+          <!-- toggler  -->
+          <div class="ui-grid-solo div-space">
+              <div class="ui-block-a">
+                    <select class="" id="informationToggler" name="">
+                      <option value="Booking Information">Booking Information</option>
+                      <option value="CTO Information">CTO Information</option>
+                    </select>
+              </div>
+          </div>
+          <!-- toggler  -->
+          <div class="" id="bookingInformation">
+          <!-- booking information section -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/edit-black.png"/>  Booking Ref:</p>
+                        <!-- <img src="../images/icons-png/bullets-black.png" alt=""> -->
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="transBooking" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Empty Depot :</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="emptyDepot" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p id="packDepotOneType"><img src="../images/icons-png/location-black.png"/></p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="packingDepot" value="" readonly>
+                    </div>
+                </div>
+                <div class="ui-grid-a div-space" id="packDepotTwoDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Packing Depot Two:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="packingDepotTwo" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space" id="packDepotThreeDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Packing Depot Three:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="packingDepotThree" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space" id="packDepotFourDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Packing Depot Four:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="packingDepotFour" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space" id="packDepotFiveDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Packing Depot Five:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="packingDepotFive" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/info-black.png"/> Loading Point Type:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="loadingPointType" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space" id="dualloadpointsDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/info-black.png"/> Loading Points:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="dualloadpoints" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space" id="weighbridgeNameDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Weighbridge:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="weighbridgeName" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/info-black.png"/>  SOLAS Method:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="solasMethod" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/calendar-black.png"/>  Load Date :</p>
+                        <!-- <img src="../images/icons-png/calendar-black.png" alt=""> -->
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="date" value="" readonly>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="ui-grid-a div-space">
+                  <div class="ui-block-a">
+                    <p><img src="../images/icons-png/navigation-black.png" alt=""> Terminal Description : </p>
+                  </div>
+                  <div class="ui-block-b">
+                    <input class="input-book" type="text" id="terminal_description" value="" readonly>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                  <div class="ui-block-a">
+                    <p><img src="../images/icons-png/info-black.png" alt=""> Container Type: </p>
+                  </div>
+                  <div class="ui-block-b">
+                    <input class="input-book" type="text" id="container_type" value="" readonly>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                  <div class="ui-block-a">
+                    <p><img src="../images/icons-png/info-black.png" alt="">  Genset: </p>
+                  </div>
+                  <div class="ui-block-b">
+                    <input class="input-book" type="text" id="genset" value="" readonly>
+                  </div>
+                </div>
+                <!-- booking information end section -->
+          </div>
+          <!-- CTO Section   -->
+        <div class="" id="ctoInformation" style="display:none">
+          <div class="ui-grid-solo div-space">
+              <div class="ui-block-a">
+                <h4>Vessel Booking</h4>
+              </div>
+          </div>
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Exporter: </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="Exporter" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Client Ref : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="ClientRef" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Container Operator : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="ContainerOperator" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Vessel Name : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="VesselName" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Voyage Number : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="VoyageNumber" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Port of Loading : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="PortOfLoading" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Port of Discharge : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="PortOfDischarge" value="" readonly>
+            </div>
+          </div>
+          <!-- Container Settings section -->
+          <div class="ui-grid-solo div-space">
+              <div class="ui-block-a">
+                <h4>Container Settings </h4>
+              </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt="">  Container Size : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="containerSize" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt=""> Commodity : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="Commodity" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt=""> Temperature Code : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="temperateCode" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt=""> Temperature Description : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="temperateSetting" value="" readonly>
+            </div>
+          </div>
+          <!--  -->
+          <div class="ui-grid-a div-space">
+            <div class="ui-block-a">
+              <p><img src="../images/icons-png/info-black.png" alt=""> Vent Settings : </p>
+            </div>
+            <div class="ui-block-b">
+              <input class="input-book" type="text" id="VentSettings" value="" readonly>
+            </div>
+          </div>
+          <!-- Container Settings section -->
+        </div>
+          <!-- CTO Section End  -->
+            <br />
+                <!--  -->
+
+                <button  type="button" id="acceptTask" name="button">Accept</button>
+                <button  type="button" id="rejectTask" name="button">Reject</button>
+
+                <div style="display:none" id="enRouteToEmptyDepotDiv">
+                  <button  type="button" id="enRouteToEmptyDepot" class="cust-btn">En Route To Empty Depot</button>
+                  <textarea name="name" rows="8" cols="80"></textarea>
+                  <button class="sendCmt" type="button" name="button">Send Comment</button>
+                </div>
+                <!--  -->
+                <div style="display:none" id="arrivedAtEmptyDepotDiv">
+                  <button type="button" id="arrivedAtEmptyDepot" class="cust-btn">Arrived At Empty Depot</button>
+                  <textarea name="name" rows="8" cols="80"></textarea>
+                  <button class="sendCmt" type="button" name="button">Send Comment</button>
+                </div>
+                <div style="display:none" id="cancelTripDiv">
+                      <button type="button" id="cancelTrip" class="cancel-btn">Cancel Task</button>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

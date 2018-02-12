@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Capture Booking View </title>
+</head>
+<body>
+    <div id="captureBooking" data-role="page">
+        <div data-role="header" class="header-nav">
+            <a id="backButtonCaptureScreen" data-icon="arrow-l" class="header-button">Back</a>
+            <h1 id="headerStatus"> </h1>
+            <a onclick="HomeNavigation()" data-icon="home" class="header-button">Home</a>
+        </div>
+        <div class="ui-content" role="main">
+           <!-- First captures -->
+           <div class="ui-grid-solo">
+             <center>
+               <img src="../images/icons/005-transport.png" class="icons" alt="">
+             </center>
+           </div>
+           <h3 id="h3Status"></h3>
+           <!-- Error Message Section  -->
+             <p id="errorMgs"></p>
+           <!-- Error Message Section  -->
+            <div id="containerSection">
+                <div class="ui-grid-solo div-space">
+                    <div class="ui-block-a">
+                        <p class="">Container Number :</p>
+                        <input maxlength="11" class="container-book" id="containerNo" onfocusout="changeContainerColor($(this).attr('id'))" type="text">
+                    </div>
+                </div>
+                <div class="ui-grid-solo div-space">
+                    <div class="ui-block-a">
+                        <p class="">Re-enter Container Number :</p>
+                        <input maxlength="11" class="container-book" onfocusout="containerRetype()"  id="containerNoAgain" type="text">
+                    </div>
+                </div>
+                <div class="ui-grid-solo div-space">
+                    <div class="ui-block-a">
+                        <p class="">Seal no. :</p>
+                        <input  class="container-book" onfocusout="changeContainerColor($(this).attr('id'))"  id="sealNo" type="text">
+                    </div>
+                </div>
+                <div class="ui-grid-solo div-space">
+                    <div class="ui-block-a">
+                        <p class=""> Tare (KG) :</p>
+                          <input maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" class="container-book" onfocusout="changeContainerColor($(this).attr('id'))"  id="tareWeight" type="number">
+                    </div>
+                </div>
+                <div class="ui-grid-solo div-space">
+                    <div class="ui-block-a">
+                        <p class="">Temperature Recording Device :</p>
+                        <input maxlength="6" id="temperatureRecordingDevice" onfocusout = "changeContainerColor($(this).attr('id'))" type="text">
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-solo" id="submitContainerSection">
+                    <div class="ui-block-a">
+                        <button class="statusBtn"  id="containerSubmit">Submit</button>
+                    </div>
+                </div>
+                <!-- Next Status Event -->
+            </div>
+            <!-- First captures -->
+            <!-- Second Phase  captures -->
+            <div id="VGMSection" style="display:none;">
+              <div class="ui-grid-solo div-space">
+                  <div class="ui-block-a">
+                      <p class="">Includes Container Weight :</p>
+                        <select class="" id="tare" name="">
+                          <option value="No">No</option>
+                          <option value="Yes">Yes</option>
+                        </select>
+                  </div>
+              </div>
+              <!--  -->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <h4 id="weightIncludes" class=""></h4>
+                        <br>
+                          <p class="">Tare (KG) :</p>
+                          <input maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" onfocusout = "validateVGM($(this).attr('id'))"  id="VGM" class="input-book" type="number">
+                          <!-- Weight Excluding  -->
+                          <div id="weightExludeDiv">
+                            <p>Weight excluding Container (KG) [ Cargo ] :</p>
+                            <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightExlude" onfocusout = "validateVGM($(this).attr('id'))" class="minus" type="number">
+                            <p> Weight Including Container (KG) [ VGM ] :</p>
+                            <!-- VGM /  -->
+                            <input maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" onfocusout = "validateVGM($(this).attr('id'))" id="resultExclude" class="input-book" type="number" readonly>
+                          </div>
+                          <!-- Weight including  -->
+                          <div style="display:none" id="weightIncludeDiv">
+                            <p>Weight Including Container (KG) [ VGM ] :</p>
+                            <input maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightInclude" onfocusout = "validateVGM($(this).attr('id'))" class="add" type="number">
+                            <p> Weight Excluding Container (KG) [ Cargo ] :</p>
+                            <!-- Cargo Weight / -->
+                            <input onfocusout = "validateVGM($(this).attr('id'))"  min="0" id="resultInclude" class="input-book" type="number" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-solo div-space">
+                    <div class="ui-block-a">
+                        <p class="">Temperature Recording Device :</p>
+                        <input id="temptale" maxlength="6"  onfocusout = "validateVGM($(this).attr('id'))" type="text">
+                    </div>
+                </div>
+                <div class="ui-grid-solo" id="submitVGMSection">
+                    <div class="ui-block-a">
+                        <button class="statusBtn" id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Phase captures-->
+
+            <!-- Next Status Event -->
+            <div id="packDepotDiv" class="ui-grid-solo" style="display:none">
+              <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+              <div id="packdepotOneDiv" class="ui-grid-solo" style="display:none">
+                <div class="ui-grid-solo div-space">
+                    <h4><img src="../images/icons-png/navigation-black.png" alt=""> Pack Depot One Name: </h4>
+                  </div>
+                  <!--  -->
+                <div class="ui-grid-solo">
+                    <input style="text-align:center !important" class="input-book" type="text" id="packDepotOne_description" value="" readonly>
+                </div>
+              </div>
+              <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+                <div class="ui-block-a">
+                    <button id="leavingPackDepot">En Route to Pack Depot </button>
+                    <textarea name="name" rows="8" cols="80"></textarea>
+                    <button class="sendCmt" type="button" name="button">Send Comment</button>
+                </div>
+            </div>
+            <!--  -->
+            <!--  -->
+            <!--  -->
+            <div id="arrivedAtPackDepotDiv" class="ui-grid-solo" style="display:none">
+              <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+              <div id="packdepotOneDiv" class="ui-grid-solo" style="display:none">
+                <div class="ui-grid-solo div-space">
+                    <h4><img src="../images/icons-png/navigation-black.png" alt=""> Pack Depot One Name: </h4>
+                  </div>
+                  <!--  -->
+                <div class="ui-grid-solo">
+                    <input style="text-align:center !important" class="input-book" type="text" id="packDepotOneAgain_description" value="" readonly>
+                </div>
+              </div>
+              <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+              <div class="ui-block-a">
+                  <button id="arrivedAtPackDepot" name="button">Arrived At Pack Depot</button>
+                  <textarea name="name" rows="8" cols="80"></textarea>
+                  <button class="sendCmt" type="button" name="button">Send Comment</button>
+                  <!-- <button class="sync" type="button" name="button">SYNC</button> -->
+              </div>
+            </div>
+            <!-- Next Status Event -->
+        </div>
+    </div>
+</body>
+</html>

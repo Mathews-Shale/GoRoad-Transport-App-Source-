@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Terminal View</title>
+</head>
+  <body>
+    <!-- Content here  -->
+      <div id="terminal" data-role="page">
+        <div data-role="header" class="header-nav">
+          <a id="backButtonCapture" data-icon="arrow-l" class="header-button">Back</a>
+          <h1 id="headerStatus"> </h1>
+          <a id="goHome" data-icon="home" class="header-button">Home</a>
+        </div>
+        <!-- Main content section -->
+        <div class="ui-content" role="main">
+             <h3 id="h3Status"></h3>
+             <!-- Error Message Section  -->
+               <p id="errorMgs"></p>
+             <!-- Error Message Section  -->
+        <div class="ui-grid-solo">
+          <div class="ui-grid-solo div-space">
+              <h4><img src="../images/icons-png/navigation-black.png" alt=""> Terminal Description : </h4>
+            </div>
+            <!--  -->
+          <div class="ui-grid-solo">
+              <input style="text-align:center !important" class="input-book" type="text" id="terminal_description" value="" readonly>
+          </div>
+        </div>
+        <!--  -->
+        <br>
+        <div  id="enRouteToTerminalDiv" class="">
+            <button  type="button" id="enRouteToTerminal" class="cust-btn">En Route To Terminal</button>
+            <textarea name="name" rows="8" cols="80"></textarea>
+            <button class="sendCmt" type="button" name="button">Send Comment</button>
+        </div>
+         <!--  -->
+      <div style="display:none"  id="arrivedAtTerminalDiv" class="">
+        <button  type="button"   id="arrivedAtTerminal" class="cust-btn">Arrived At Terminal</button>
+        <textarea name="name" rows="8" cols="80"></textarea>
+        <button class="sendCmt" type="button" name="button">Send Comment</button>
+      </div>
+      <!--  -->
+      <div style="display:none"  id="containerOffLoadedDiv">
+        <button   type="button"   id="containerOffLoaded" class="cust-btn">Container Offloaded</button>
+        <textarea name="name" rows="8" cols="80"></textarea>
+        <button class="sendCmt" type="button" name="button">Send Comment</button>
+      </div>
+      <!--  -->
+        </div>
+      </div>
+  </body>
+</html>

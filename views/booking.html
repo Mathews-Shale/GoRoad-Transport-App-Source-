@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Page</title>
+  <script type="text/javascript">
+    var clientId;
+
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    function onBackKeyDown() {
+      alert('exe');_
+        navigator.app.exitApp();
+    }
+
+
+    //$(document).ready(function () {
+    //    SetPanicCss();
+    //    //$("#assist").click(function() {
+    //    //window.open("assistance_service.html", '_blank');
+    //    //window.location = "assistance_service.html";
+    //});
+
+</script>
+</head>
+  <body>
+    <!-- Content here  -->
+      <div id="booking" data-role="page">
+          <div data-role="header" class="header-nav">
+            <div data-role="header" class="header-nav">
+              <h1 id="headerStatus">Current Bookings</h1>
+              <a onclick="refreshBookings()" data-icon="refresh" class="header-button">Refresh</a>
+            </div>
+          </div>
+          <!-- Main content section -->
+          <div class="ui-content" role="main">
+            <br />
+            <br />
+            <center>
+              <img class="logo" src="../images/logo.png" alt="Alternate Text" />
+            </center>
+            <div class="ui-grid-solo"  style ="display:none" id="resumeTaskDiv">
+              <button type="button" class="cancel-btn" id="quitTrip">Cancel Current Task</button>
+              <!-- Handle CTO information Popup -->
+              <a  href="cto.html" class="pop-up-btn" data-role="button" data-rel="dialog" data-transition="pop">Show CTO Information</a>
+              <!-- Handle CTO information Popup -->
+            </div>
+            <h3 id="h3Status">Profile</h3>
+            <div class="ui-grid-a div-space">
+              <div class="ui-block-a">
+                <label><img src="../images/icons-png/user-black.png" alt="">  Username : </label>
+              </div>
+              <div class="ui-block-b">
+                <label class="profileText" id="driverName"></label>
+              </div>
+            </div>
+            <br>
+            <div class="ui-grid-a div-space">
+              <div class="ui-block-a">
+                <label><img src="../images/icons-png/phone-black.png" alt=""> Number : </label>
+              </div>
+              <div class="ui-block-b">
+                <label class="profileText" id="number"></label>
+              </div>
+            </div>
+            <br>
+            <div class="ui-grid-a div-space">
+              <div class="ui-block-a">
+                <label><img src="../images/icons-png/location-black.png" alt=""> Country : </label>
+              </div>
+              <div class="ui-block-b">
+              <img src="../images/namibia.png" id="namibia" class="country" alt="">
+              <img src="../images/mzansi.png"  id="mzansi" class="country" alt="">
+              </div>
+            </div>
+            <br>
+            <div class="ui-grid-a div-space">
+              <div class="ui-block-a">
+                <label><img src="../images/icons-png/bullets-black.png" alt=""> Current Bookings : </label>
+              </div>
+              <div class="ui-block-b">
+                <label class="profileText" id="bookingNumber"></label>
+              </div>
+            </div>
+            <br>
+            <div class="ui-grid-a div-space" id="bookingInProgessDiv" style="display:none">
+              <div class="ui-block-a">
+                <label><img src="../images/icons-png/clock-black.png" alt=""> Task in Progress : </label>
+              </div>
+              <div class="ui-block-b">
+                <label class="profileText" id="taskInProgress"></label>
+              </div>
+              <br>
+              <br>
+                <button  type="button" id="continueTask" name="button">Continue Task</button>
+                <br>
+            </div>
+            <div class="ui-grid-solo">
+              <ul id="bookingList">
+
+              </ul>
+            </div>
+          </div>
+          <!---  Handle Logout Event  --->
+          <div class="" data-role="footer" data-position="fixed">
+            <button class="logout-btn" onclick="logout()">
+                    Logout
+                </button>
+          </div>
+        <!---  Handle Logout Event  --->
+      </div>
+  </body>
+</html>

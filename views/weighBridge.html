@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weighbridge View</title>
+</head>
+  <body>
+    <!-- Content here  -->
+      <div id="weighBridge" data-role="page">
+        <div data-role="header" class="header-nav">
+          <a id="backButtonCaptureWeigh" data-icon="arrow-l" class="header-button">Back</a>
+          <h1 id="headerStatus"> </h1>
+          <a onclick="HomeNavigation()" data-icon="home" class="header-button">Home</a>
+        </div>
+        <!-- Main content section -->
+        <div class="ui-content" role="main">
+          <div class="ui-grid-solo">
+            <center>
+              <img src="../images/icons/unnamed.png" style="width:50%" class="icons" alt="">
+            </center>
+          </div>
+             <h3 id="h3Status"></h3>
+        <!-- Keep simple for now   -->
+        <!-- Error Message Section  -->
+          <p id="errorMgs"></p>
+        <!-- Error Message Section  -->
+        <div class="ui-grid-solo div-space">
+            <h4><img src="../images/icons-png/navigation-black.png" alt=""> Weighbride Name: </h4>
+          </div>
+          <!--  -->
+        <div class="ui-grid-solo div-space">
+            <input style="text-align:center !important" class="input-book" type="text" id="weighbride_description" value="" readonly>
+        </div>
+        <!-- -->
+              <div class="" id="enRouteToWeighBridgeDiv">
+                <button type="button"  id="enRouteToWeighBridge" class="cust-btn">En Route To Weighbridge</button>
+                <textarea name="name" rows="8" cols="80"></textarea>
+                <button class="sendCmt" type="button" name="button">Send Comment</button>
+              </div>
+              <!--  -->
+              <div class="" id="arrivedAtWeighBridgeDiv" style="display:none" >
+                <button type="button" id="arrivedAtWeighBridge" class="cust-btn">Arrived At Weighbridge</button>
+                <textarea name="name" rows="8" cols="80"></textarea>
+                <button class="sendCmt" type="button" name="button">Send Comment</button>
+              </div>
+          </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Second Pack Depot</title>
+</head>
+  <body>
+    <!-- Content here  -->
+      <div id="packDepotTwo" data-role="page">
+        <div data-role="header" class="header-nav">
+          <a id="backButtonCapture" data-icon="arrow-l" class="header-button">Back</a>
+          <h1 id="headerStatus"> </h1>
+          <a onclick="HomeNavigation()" data-icon="home" class="header-button">Home</a>
+        </div>
+        <!-- Main content section -->
+        <div class="ui-content" role="main">
+             <h3 id="h3Status"></h3>
+        <!-- Keep simple for now   -->
+
+        <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+        <div id="packdepotTwoDiv" class="ui-grid-solo" style="display:none">
+          <div class="ui-grid-solo div-space">
+              <h4><img src="../images/icons-png/navigation-black.png" alt=""> Pack Depot 2 Name: </h4>
+            </div>
+            <!--  -->
+          <div class="ui-grid-solo">
+              <input style="text-align:center !important" class="input-book" type="text" id="packDepotTwo_description" value="" readonly>
+          </div>
+        </div>
+        <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+        <!--  -->
+        <div class="" id="enrouteTopackDepotTwoDiv">
+          <button id="enrouteTopackDepotTwo" type="button" name="button">En Route To Second Pack Depot</button>
+          <textarea name="name" rows="8" cols="80"></textarea>
+          <button class="sendCmt" type="button" name="button">Send Comment</button>
+        </div>
+        <!--  -->
+        <div class="" id="arrivedAtPackDepotTwoDiv" style="display:none">
+          <button id="arrivedAtPackDepotTwo" type="button" name="button">Arrived At Second Pack Depot</button>
+          <textarea name="name" rows="8" cols="80"></textarea>
+          <button class="sendCmt" type="button" name="button">Send Comment</button>
+        </div>
+        <!--  -->
+        <!-- Second Depot captures -->
+        <div id="VGMSectionTwo" style="display:none">
+          <div class="ui-grid-solo div-space">
+              <div class="ui-block-a">
+                  <p class="">Includes Container Weight :</p>
+                    <select class="" id="tareTwo" name="">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+              </div>
+          </div>
+            <div class="ui-grid-solo">
+              <!-- Error Message Section  -->
+                <p id="errorMgs"></p>
+              <!-- Error Message Section  -->
+                <div class="ui-block-a">
+                    <h4 id="weightIncludesTwo" class=""></h4>
+                      <p class="">Tare (KG) :</p>
+                      <input maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"  id="VGM"  onfocusout = "validateVGM($(this).attr('id'))"  type="number" >
+                      <!-- Weight Excluding  -->
+                      <div id="weightExludeDivTwo">
+                        <p>Weight excluding Container (KG) [ Cargo ]  Pack 1:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"id="weightExludeTwoPack1" value = "0" class="input-book" readonly>
+                        <p>Weight excluding Container (KG) [ Cargo ]  Pack 2:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightExludeTwo" onfocusout = "validateVGM($(this).attr('id'))" value="0" class="minus" type="number">
+                        <p> Weight Including Container (KG) [ VGM ] :</p>
+                        <!-- VGM /  -->
+                        <input  min="0" id="resultExcludeTwo" value="0" class="input-book" type="number" readonly>
+                      </div>
+                      <!-- Weight including  -->
+                      <div style="display:none" id="weightIncludeDivTwo">
+                        <p>Weight Including Container (KG) [ VGM ]  Pack 1</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightIncludeTwoPack1" value = "0" class="input-book" readonly>
+                        <p>Weight Including Container (KG) [ VGM ]  Pack 2:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightIncludeTwo" onfocusout = "validateVGM($(this).attr('id'))" value="0" class="add" type="number">
+                        <p> Weight Excluding Container (KG) [Cargo] :</p>
+                        <!-- Cargo Weight / -->
+                        <input  min="0" id="resultIncludeTwo" value="0" class="input-book" type="number" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-solo div-space">
+                <div class="ui-block-a">
+                    <p class="">Temperature Recording Device :</p>
+                    <input id="temptale" class="input-book" onfocusout = "validateVGM($(this).attr('id'))" type="text" readonly>
+                </div>
+            </div>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a">
+                    <button class="statusBtn" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <br>
+      <!--  -->
+        </div>
+      </div>
+  </body>
+</html>

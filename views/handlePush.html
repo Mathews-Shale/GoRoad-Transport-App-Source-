@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="handlePush" data-role="page">
+        <div data-role="header" class="header-nav">
+            <h1 id="headerStatus">Transport Booking</h1>
+        </div>
+        <div class="ui-content" role="main">
+          <br>
+          <div class="ui-grid-solo header">
+            <center>
+              <img src="../images/icons/007-verification-of-delivery-list-clipboard-symbol.png" class="icons" alt="">
+            </center>
+          </div>
+          <div class="ui-grid-solo ">
+            <h3 id="h3Status">Booking Information</h3>
+          </div>
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/edit-black.png"/>  Booking :</p>
+                        <!-- <img src="../images/icons-png/bullets-black.png" alt=""> -->
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="transBooking" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Empty Depot :</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="emptyDepot" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Packing Depot :</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="packingDepot" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space" id="packDepotTwoDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Packing Depot Two:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="packingDepotTwo" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space" id="weighbridgeNameDiv">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/location-black.png"/>  Weighbridge:</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="weighbridgeName" value="" readonly>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                    <div class="ui-block-a">
+                        <p><img src="../images/icons-png/calendar-black.png"/>  Load Date :</p>
+                        <!-- <img src="../images/icons-png/calendar-black.png" alt=""> -->
+                    </div>
+                    <div class="ui-block-b">
+                        <input class="input-book" type="text" id="date" value="" readonly>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="ui-grid-a div-space">
+                  <div class="ui-block-a">
+                    <p><img src="../images/icons-png/navigation-black.png" alt=""> Terminal Description : </p>
+                  </div>
+                  <div class="ui-block-b">
+                    <input class="input-book" type="text" id="terminal_description" value="" readonly>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                  <div class="ui-block-a">
+                    <p><img src="../images/icons-png/info-black.png" alt=""> Container Type: </p>
+                  </div>
+                  <div class="ui-block-b">
+                    <input class="input-book" type="text" id="container_type" value="" readonly>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="ui-grid-a div-space">
+                  <div class="ui-block-a">
+                    <p><img src="../images/icons-png/info-black.png" alt="">  Genset: </p>
+                  </div>
+                  <div class="ui-block-b">
+                    <input class="input-book" type="text" id="genset" value="" readonly>
+                  </div>
+                </div>
+            <br />
+                <!--  -->
+
+                <button  type="button" id="acceptTask" name="button">Accept</button>
+                <button  type="button" id="rejectTask" name="button">Reject</button>
+                <button  type="button" id="noResponse" name="button">No Response</button>
+            </div>
+    </div>
+</body>
+</html>

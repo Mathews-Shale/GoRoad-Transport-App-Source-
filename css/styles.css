@@ -1,0 +1,173 @@
+/*  Fonts  */
+
+@font-face
+{
+  font-family:"Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+/*  defaults  */
+
+button
+{
+    background-color:#376499 !important;
+    color:white !important;
+    border: none !important;
+    font-family: "Open Sans" , sans-serif , serif;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , p , label , input
+{
+  font-family:"Open Sans" !important;
+}
+h3
+{
+  color:crimson;
+  text-align: center;
+  text-transform: uppercase;
+}
+h4
+{
+  color:#376499;
+  text-align: center;
+}
+textarea {
+  height: 100px !important;
+  border: 1px solid #000 !important;
+}
+/* my Styles    */
+
+/* Buttons  */
+
+.statusBtn
+{
+  background-color : #5cb85c !important;
+  border-radius: 50px !important;
+  padding: 15px
+}
+
+.sendCmt
+{
+  background-color: #eea236 !important;
+}
+.sync
+{
+  background-color: #c0deed !important;
+}
+#acceptTask
+{
+    background-color:#5cb85c !important;
+}
+#rejectTask
+{
+  background-color:#d9534f !important;
+}
+.header-button
+{
+  border: none !important;
+  background: none !important;
+  color: white !important;
+}
+.cancel-btn
+{
+  background-color:#d9534f !important;
+}
+.pop-up-btn
+{
+  background-color: mediumaquamarine !important;
+  color : black !important;
+}
+/* divs */
+
+.borderThick
+{
+  border-bottom: 3px solid #999;
+  padding-bottom: 20px;
+}
+.div-space
+{
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px;
+}
+#login
+{
+    background-image:url('../images/truck-2407264_1280.jpeg');
+    background-size:cover;
+    position: fixed;
+}
+#login
+{
+  color:white !important;
+}
+.logo
+{
+    width:50%;
+}
+
+.header-nav
+{
+     background-color :#376499 !important;
+     border:#3388cc !important;
+}
+.header-nav h1
+{
+    color:#fff !important;
+}
+#errorMgs
+{
+    color:darkred;
+    text-align:center;
+}
+.logout-btn
+{
+  width: 100% !important;
+  padding:14px !important;
+  font-size: 18px;
+}
+.profileText
+{
+  color: dodgerblue;
+  font-weight: bold;
+}
+.bookingList
+{
+  list-style: none !important;
+  text-align: center !important;
+  font-size: 15px;
+  background-color: #5cb85c!important;
+  margin-right: 3em;
+  padding: 10px;
+  color: white;
+  font-weight: 300 !important;
+  letter-spacing: 1px;
+  font-family: tahoma;
+}
+
+/* handle input events  */
+#containerNo , #containerNoAgain , #sealNo , #temptale , #temperatureRecordingDevice
+{
+  text-transform: uppercase;
+}
+.input-book
+{
+  background-color: antiquewhite !important;
+  border:1px solid dodgerblue;
+  padding:10px;
+}
+.container-book
+{
+  padding:10px;
+}
+
+/* handle p  */
+
+.txtColor
+{
+  color:dodgerblue;
+}
+.country
+{
+  width:20%;
+  margin-top: -5%;
+  display: none;
+}

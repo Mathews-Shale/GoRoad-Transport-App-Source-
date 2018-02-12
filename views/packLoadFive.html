@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fifth Pack Depot</title>
+</head>
+  <body>
+    <!-- Content here  -->
+      <div id="packDepotFive" data-role="page">
+        <div data-role="header" class="header-nav">
+          <a id="backButtonCapture" data-icon="arrow-l" class="header-button">Back</a>
+          <h1 id="headerStatus"> </h1>
+          <a onclick="HomeNavigation()" data-icon="home" class="header-button">Home</a>
+        </div>
+        <!-- Main content section -->
+        <div class="ui-content" role="main">
+             <h3 id="h3Status"></h3>
+        <!-- Keep simple for now   -->
+
+        <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+        <div id="packdepotFiveDiv" class="ui-grid-solo" style="display:none">
+          <div class="ui-grid-solo div-space">
+              <h4><img src="../images/icons-png/navigation-black.png" alt=""> Pack Depot 5 Name: </h4>
+            </div>
+            <!--  -->
+          <div class="ui-grid-solo">
+              <input style="text-align:center !important" class="input-book" type="text" id="packDepotFive_description" value="" readonly>
+          </div>
+        </div>
+        <!-- Only handle when there is more then one pack depot /// CONDITIONAL -->
+        <!--  -->
+        <div class="" id="enrouteTopackDepotFiveDiv">
+          <button id="enrouteTopackDepotFive" type="button" name="button">En Route To Fifth Pack Depot</button>
+          <textarea name="name" rows="8" cols="80"></textarea>
+          <button class="sendCmt" type="button" name="button">Send Comment</button>
+        </div>
+        <!--  -->
+        <div class="" id="arrivedAtPackDepotFiveDiv" style="display:none">
+          <button id="arrivedAtPackDepotFive" type="button" name="button">Arrived At Fifth Pack Depot</button>
+          <textarea name="name" rows="8" cols="80"></textarea>
+          <button class="sendCmt" type="button" name="button">Send Comment</button>
+        </div>
+        <!-- Third Depot captures -->
+        <div id="VGMSectionFive" style="display:none">
+          <div class="ui-grid-solo div-space">
+              <div class="ui-block-a">
+                  <p class="">Includes Container Weight :</p>
+                    <select class="" id="tareFive" name="">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+              </div>
+          </div>
+            <div class="ui-grid-solo">
+              <!-- Error Message Section  -->
+                <p id="errorMgs"></p>
+              <!-- Error Message Section  -->
+                <div class="ui-block-a">
+                    <h4 id="weightIncludesFive" class=""></h4>
+                      <p class="">Tare (KG) :</p>
+                      <input maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"  id="VGM"  onfocusout = "validateVGM($(this).attr('id'))"  type="number" >
+                      <!-- Weight Excluding  -->
+                      <div id="weightExludeDivFive">
+                        <p>Weight excluding Container (KG) [ Cargo ]  Pack 1:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"id="weightExludeFivePack1" value = "0" class="input-book" readonly>
+                        <p>Weight excluding Container (KG) [ Cargo ]  Pack 2:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightExludeFivePack2" value="0" class="input-book" readonly>
+                        <p>Weight excluding Container (KG) [ Cargo ]  Pack 3:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightExludeFivePack3" value="0" class="input-book" readonly>
+                        <p> Weight excluding Container (KG) [ Cargo ] Pack 4:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightExludeFivePack4" value="0" class="input-book" readonly>
+                        <p> Weight excluding Container (KG) [ Cargo ] Pack 5:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightExludeFive" onfocusout = "validateVGM($(this).attr('id'))" value="0" class="minus" type="number">
+                        <p> Weight Including Container (KG) [VGM] :</p>
+                        <!-- VGM /  -->
+                        <input  min="0" id="resultExcludeFive" value="0" class="input-book" type="number" readonly>
+                      </div>
+                      <!-- Weight including  -->
+                      <div style="display:none" id="weightIncludeDivFive">
+                        <p>Weight Including Container (KG) [ VGM ]  Pack 1</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightIncludeFivePack1" value = "0" class="input-book" readonly>
+                        <p>Weight Including Container (KG) [ VGM ]  Pack 2:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightIncludeFivePack2" value="0" class="input-book" readonly>
+                        <p>Weight Including Container (KG) [ VGM ]  Pack 3:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightIncludeFivePack3" value="0" class="input-book" readonly>
+                        <p>Weight Including Container (KG) [ VGM ]  Pack 3:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightIncludeFivePack4" value="0" class="input-book" readonly>
+                        <p>Weight Including Container (KG) [ VGM ]  Pack 5:</p>
+                        <input  maxlength="6" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="weightIncludeFive" onfocusout = "validateVGM($(this).attr('id'))" value="0" class="add" type="number">
+                        <p> Weight Excluding Container (KG) [Cargo] :</p>
+                        <!-- Cargo Weight / -->
+                        <input  min="0" id="resultIncludeFive" value="0" class="input-book" type="number" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-solo div-space">
+                <div class="ui-block-a">
+                    <p class="">Temperature Recording Device :</p>
+                    <input id="temptale" class="input-book" onfocusout = "validateVGM($(this).attr('id'))" type="text" readonly>
+                </div>
+            </div>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a">
+                    <button class="statusBtn" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <br>
+      <!--  -->
+        </div>
+      </div>
+  </body>
+</html>
